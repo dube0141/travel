@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="handheldfriendly" content="true" />
+    <meta name="mobileoptimized" content="240" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,target-densitydpi=device-dpi" />
+    <title>Responsive Travel Form</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Halant:300,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/form.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<header class="masthead">
+			<h1>Hotel-O-City</h1>
+		</header>
+		<section class="main">
+			<h2>Come visit one of our luxurious resorts for an experience of a lifetime!</h2>
+			<p>Search For a Resort Below:</p>
+			
+            <form name="travelForm" id="travelForm" action="#" method="post" enctype="application/x-www-form-urlencoded">
+				
+				<div class="formBox">
+                    <label for="firstname">First Name:<img id="icon" src="img/person-3x.png"></label>
+					<input type="text" name="firstname" id="firstname" required placeholder="Bob" />
+				</div>
+                
+				<div class="formBox">
+                    <label for="lastname">Last Name:<img id="icon" src="img/pencil-3x.png"></label>
+					<input type="text" name="lastname" id="lastname" required placeholder="Smith" />
+				</div>
+                
+				<div class="formBox">
+                    <label for="email">Email:<img id="icon" src="img/envelope-open-3x.png"></label>
+					<input type="text" name="email" id="email" required placeholder="example@email.com" />
+                    
+				</div>
+                
+				<div class="formBox">
+					<label for="departure">Departure:<img id="icon" src="img/map-marker-3x.png"></label>
+				    <select required name="country" id="country">
+                        <option selected value="">Please choose</option>
+                        <optgroup label="Cities">
+                            <option value="Adelaide">Adelaide</option>
+                            <option value="GR">Bandung</option>
+                            <option value="RR">Bangkok</option>
+                            <option value="YR">Beijing</option>
+                            <option value="PR">Hanoi</option>
+                            <option value="PR2">Ho Chi Minh City</option>
+                            <option value="NR">Hong Kong</option>
+                            <option value="HR">Jakarta</option>
+                        </optgroup>
+                    </select>
+				</div>
+                
+				<div class="formBox">
+					<label for="destination">Destination:<img id="icon" src="img/map.png"></label>
+                    <select required name="resorts" id="resorts">
+                    <option selected value="">Please choose</option>
+                       <optgroup label="Cities">
+                            <option value="Adelaide">Adelaide</option>
+                            <option value="GR">Bandung</option>
+                            <option value="RR">Bangkok</option>
+                            <option value="YR">Beijing</option>
+                            <option value="PR">Hanoi</option>
+                            <option value="PR2">Ho Chi Minh City</option>
+                            <option value="NR">Hong Kong</option>
+                            <option value="HR">Jakarta</option>
+                        </optgroup>
+                    </select>
+				</div>
+				
+				<div class="formBox">
+                    <label for="departure_dt">Departure Date:<img id="icon" src="img/clock-3x.png"></label>
+					<input type="date" name="departure_dt" id="departure_dt" required placeholder="" />
+				</div>
+				<div class="formBox">
+                    <label for="return_dt">Return Date:<img id="icon" src="img/clock-3x.png"></label>
+					<input type="date" name="return_dt" id="return_dt" required placeholder=""/>
+				</div>
+				
+				<div class="formBox">
+					<label for="num_adults">Number of Adults:<img id="icon" src="img/people-3x.png"></label>
+					<select name="num_adults" id="num_adults">
+                        <option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+				</div>
+				<div class="formBox">
+                    <div id="floatr">
+                        <p>
+                            <label for="amount">Maximum price:<img id="icon" src="img/dollar-3x.png"></label>
+                            <div id="slider-range-min"><input type="text" id="amount" readonly></div>
+                        </p>
+                    </div>
+				</div>
+				<div class="colButtons">
+					<input type="reset" name="btnReset" id="btnReset" value="Reset" />
+					<input type="submit" name="btnSubmit" id="btnSubmit" value="Search" />
+				</div>
+			</form>
+		</section>
+		<footer class="foot">
+			<p>&copy; 2014 Chicken Stuff Inc.</p>
+		</footer>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
